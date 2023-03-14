@@ -21,7 +21,7 @@ def merge(tablica_lewa, tablica_prawa):
 
 
 def mergesort(tablica):
-    print("mergesort dla "+str(tablica))
+    #print("mergesort dla "+str(tablica))
     if len(tablica) > 1:
         
         srodek = (len(tablica))// 2
@@ -43,7 +43,7 @@ def mergesort(tablica):
         while p < len(tablica_prawa):
             tablica_koncowa.append(tablica_prawa[p])
             p=p+1
-        print("tablica koncowa" + str(tablica_koncowa))
+        #print("tablica koncowa" + str(tablica_koncowa))
         return tablica_koncowa[:]
     else:
         return tablica[:]
