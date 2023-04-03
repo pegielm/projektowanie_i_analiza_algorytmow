@@ -1,0 +1,43 @@
+jeżeli left[z]==NIL i right[z]==NIL 
+    powtarzaj dla i=0...n   //n to ilosc elementow w drzewie
+        jeżeli left[i]==z
+            left[i]=NIL
+            break
+        jeżeli right[i]==z
+            right[i]=NIL
+            break
+jeżeli left[z]!=NIL i right[z]!=NIL
+    y_lewy=left[z]
+    y_prawy=right[z]
+    //dzieci dzieci - kopiowanie danych z y do z 
+    jeżeli left[y_lewy]!=NIL to
+        lewy_wnuk=left[y_lewy]
+    w innym przypadku
+        lewy_wnuk=right[y_lewy]
+    jeżeli right[y_prawy]!=NIL to
+        prawy_wnuk=left[y_prawy]
+    w innym przypadku
+        prawy_wnuk=right[y_prawy]
+    //usuwanie y (jak w poleceniu pkt3.2)
+    left[y_lewy]=NIL
+    right[y_lewy]=NIL
+    left[y_prawy]=NIL
+    right[y_prawy]=NIL
+    //dane z y do z
+    powtarzaj dla i=0...n   //n to ilosc elementow w drzewie
+        jeżeli left[i]==z
+            left[i]=lewy_wnuk
+        jeżeli right[i]==z
+            right[i]=prawy_wnuk
+
+
+w innym przypadku //jedno dziecko
+    powtarzaj dla i=0...n  
+        jeżeli left[i]==z
+            left[i]=left[z]
+            right[i]=right[z]
+            break
+        jeżeli right[i]==z
+            right[i]=left[z]
+            right[i]=right[z]
+            break

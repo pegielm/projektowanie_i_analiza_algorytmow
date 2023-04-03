@@ -4,12 +4,12 @@ struct list
 {
     struct list * nastepny;
     int var;
-    void last(struct list){
-        
-    }
+    
+
 };
 
 int main(){
-    
+    struct list element;
+    printf("%s",element.nastepny);
     return 0;
 }
