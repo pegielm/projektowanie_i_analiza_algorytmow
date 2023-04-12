@@ -1,5 +1,7 @@
 def sortowanie_kopcowe(tablica):
+    
     def kopiec(tablica, i, n):
+        print(tablica)
         lewy = 2 * i + 1
         prawy = 2 * i + 2
         najwiekszy = i
@@ -23,6 +25,6 @@ def sortowanie_kopcowe(tablica):
         kopiec(tablica, 0, i)
 
     return tablica
-tablica=[6,3,5,1,4,2]
+tablica=[6,3,5,1,4,2,7,8,9,10]
 tablica=sortowanie_kopcowe(tablica)
 print(tablica)

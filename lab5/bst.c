@@ -54,18 +54,18 @@ struct node* insertRight(struct node* current, int value) {
 }
 
 int main() {
-  struct node* root = createNode(4);
+  struct node* root = createNode(5);
   insertLeft(root, 3);            
   insertRight(root, 6);                   
   insertLeft(root->left, 2);
   insertLeft(root->left->left,1);
-  insertRight(root->left,5);
+  insertRight(root->left,4);
   /*
-            4
+            5
            / \
           3   6
         / |   
-       2  5
+       2  4
        |
        1
 

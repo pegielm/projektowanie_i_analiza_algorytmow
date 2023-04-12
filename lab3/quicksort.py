@@ -1,4 +1,5 @@
 def szybkie_sortowanie(tablica):
+    print(tablica)
     if len(tablica) <= 1:
         return tablica
     
@@ -13,6 +14,6 @@ def szybkie_sortowanie(tablica):
             wieksze.append(element)
     
     return szybkie_sortowanie(mniejsze) + [pivot] + szybkie_sortowanie(wieksze)
-tablica=[6,3,5,1,4,2]
+tablica=[4,6,3,5,1,2]
 tablica=szybkie_sortowanie(tablica)
 print(tablica)

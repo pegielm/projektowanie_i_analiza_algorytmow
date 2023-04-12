@@ -1,5 +1,7 @@
 def sortowanie_scalanie(tablica):
+    print("sortowanie"+str(tablica))
     def scalanie(tablica_lewa, tablica_prawa):
+        print("scalanie L: "+str(tablica_lewa)+" P: "+str(tablica_prawa))
         i = j = 0
         scalona_tablica = []
         
@@ -23,10 +25,11 @@ def sortowanie_scalanie(tablica):
         return tablica
     
     srodek = len(tablica) // 2
-    tablica_lewa = sortowanie_scalanie(tablica[:srodek])
+    tablica_lewa = sortowanie_scalanie(tablica[:srodek]) 
     tablica_prawa = sortowanie_scalanie(tablica[srodek:])
     
     return scalanie(tablica_lewa, tablica_prawa)
-tablica=[6,3,5,1,4,2]
+
+tablica=[6,3,5,1,4,2,7]
 tablica=sortowanie_scalanie(tablica)
 print(tablica)
